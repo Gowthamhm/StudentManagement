@@ -1,0 +1,9 @@
+String getall ="select * from student";
+String getall ="select * from student where STUDENTID='"+id+"'";
+String query = " insert into student (STUDENTID, STUDENTNAME, MARKS)"+ " values (?, ?, ?)";
+		 PreparedStatement preparedStmt = conn.prepareStatement(query);
+		 preparedStmt.setString(1,student.getStudentId());
+		 preparedStmt.setString(2, student.getStudentName());
+		 preparedStmt.setDouble(3, student.getMarks());
+String update = " update student set studentid ='"+student.getStudentId()+"',STUDENTNAME ='"+student.getStudentName()+"',MARKS="+student.getMarks()+" where STUDENTID='"+id+"'";
+	String delete = "delete from student where studentid ='"+id+"'";

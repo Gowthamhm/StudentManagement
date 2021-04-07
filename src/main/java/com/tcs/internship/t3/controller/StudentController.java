@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tcs.internship.t3.bean.StudentBean;
-import com.tcs.internship.t3.service.StudentService;
+import com.tcs.internship.t3.service.StudentServiceImpl;
 
 @RestController
 public class StudentController {
 
 	@Autowired
-	private StudentService ss;
+	private StudentServiceImpl ss;
 	
 	@RequestMapping("/getStudent")
 	public List<StudentBean> getAllStudent() throws SQLException{
